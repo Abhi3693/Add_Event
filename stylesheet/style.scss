@@ -1,0 +1,86 @@
+@import "reset";
+@import "general";  
+
+body{
+    background-color:wheat;
+}
+.container-out{
+    text-align: center;
+    box-shadow: 4px 4px 10px lightgray;
+    background-color: #fff;
+    width: 70%;
+    margin: 100px auto;
+    padding: 30px;
+}
+.container{
+    @extend .border-radius;
+    display: flex;
+    justify-content: space-evenly;
+}
+h1{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+    text-align: center;
+    
+}
+#months{
+    padding:5px 10px;
+    @extend .border;
+    @extend .border-radius;
+    display: block;
+    margin-bottom: 2rem;
+}
+input{
+    @extend #months;
+    width: 50%;
+}
+.btn{
+    @extend #months;
+    background-color: green;
+    color: #fff;
+    width: 30%;
+}
+.input-holder{
+    width: 50%;
+}
+.calender-holder{
+    width: 50%;
+    text-align: left; 
+    span{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        display: inline-block;
+    }
+}
+.calender{
+    li{
+        display: inline-block;
+        border: 1px solid lightgray;
+        padding: 5px;
+        width: 20px;
+        height: 20px;
+        display: grid;
+        place-content: center;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        width: 50%;
+        .selected{
+            background-color: rgb(68, 198, 68);
+        }
+    }
+}
+.show-event{
+    li{
+        display: flex;
+        span{
+            margin-left: 50px;
+        }
+        margin: 10px 0;
+    }
+}
